@@ -46,8 +46,8 @@ public class Main {
         else {
             num_1 = (byte) (get_index_Array(input_arr[0], nums_rim) + 1);
             num_2 = (byte) (get_index_Array(input_arr[2], nums_rim) + 1);
-            if (get_result(num_1, input_arr[1], num_2) < 0){
-                throw new IOException("В римской системе нет отрицательных чисел");
+            if (get_result(num_1, input_arr[1], num_2) <= 0){
+                throw new IOException("В римской системе нет отрицательных чисел и нуля");
             }
             result = nums_rim[get_result(num_1, input_arr[1], num_2) - 1];
         }
